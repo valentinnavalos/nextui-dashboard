@@ -1,6 +1,6 @@
 import React from 'react';
-import {Box} from '../../styles/box';
-import {Svg} from '../../styles/svg';
+import { Box } from '../../styles/box';
+import { Svg } from '../../styles/svg';
 
 export const NotificationIcon = () => {
    return (

@@ -1,7 +1,7 @@
-import {Collapse, Text} from '@nextui-org/react';
-import React, {useState} from 'react';
-import {ChevronUpIcon} from '../icons/sidebar/chevron-up-icon';
-import {Flex} from '../styles/flex';
+import { Collapse, Text } from '@nextui-org/react';
+import React, { useState } from 'react';
+import { ChevronUpIcon } from '../icons/sidebar/chevron-up-icon';
+import { Flex } from '../styles/flex';
 
 interface Props {
    icon: React.ReactNode;
@@ -9,7 +9,7 @@ interface Props {
    items: string[];
 }
 
-export const CollapseItems = ({icon, items, title}: Props) => {
+export const CollapseItems = ({ icon, items, title }: Props) => {
    const [open, setOpen] = useState(false);
 
    const handleToggle = () => setOpen(!open);
@@ -43,7 +43,7 @@ export const CollapseItems = ({icon, items, title}: Props) => {
                   justify={'between'}
                   onClick={handleToggle}
                >
-                  <Flex css={{gap: '$6'}}>
+                  <Flex css={{ gap: '$6' }}>
                      {icon}
                      <Text
                         span

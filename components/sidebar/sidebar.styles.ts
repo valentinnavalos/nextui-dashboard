@@ -1,4 +1,4 @@
-import {styled} from '@nextui-org/react';
+import { styled } from '@nextui-org/react';
 
 export const SidebarWrapper = styled('div', {
    'backgroundColor': '$background',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Svg} from '../../styles/svg';
+import { Svg } from '../../styles/svg';
 
 export const ExportIcon = () => {
    return (

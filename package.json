@@ -1,5 +1,6 @@
 {
-   "name": "dashboard",
+   "name": "nextjs-dashboard",
+   "author": "valentinnavalos",
    "version": "0.1.0",
    "private": true,
    "scripts": {

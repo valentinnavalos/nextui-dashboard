@@ -4,7 +4,7 @@ interface Props {
    width?: number;
    height?: number;
 }
-export const DeleteIcon = ({fill, size, height, width, ...props}: Props) => {
+export const DeleteIcon = ({ fill, size, height, width, ...props }: Props) => {
    return (
       <svg
          width={size || width || 24}

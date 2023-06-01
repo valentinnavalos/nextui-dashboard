@@ -1,8 +1,8 @@
-import {Text, Link} from '@nextui-org/react';
+import { Text, Link } from '@nextui-org/react';
 import NextLink from 'next/link';
 import React from 'react';
-import {useSidebarContext} from '../layout/layout-context';
-import {Flex} from '../styles/flex';
+import { useSidebarContext } from '../layout/layout-context';
+import { Flex } from '../styles/flex';
 
 interface Props {
    title: string;
@@ -11,8 +11,8 @@ interface Props {
    href?: string;
 }
 
-export const SidebarItem = ({icon, title, isActive, href = ''}: Props) => {
-   const {collapsed, setCollapsed} = useSidebarContext();
+export const SidebarItem = ({ icon, title, isActive, href = '' }: Props) => {
+   const { collapsed, setCollapsed } = useSidebarContext();
 
    const handleClick = () => {
       if (window.innerWidth < 768) {
@@ -44,12 +44,12 @@ export const SidebarItem = ({icon, title, isActive, href = ''}: Props) => {
                   },
                   ...(isActive
                      ? {
-                          'bg': '$blue200',
-                          '& svg path': {
-                             fill: '$blue600',
-                          },
-                       }
-                     : {'&:hover': {bg: '$accents2'}}),
+                        'bg': '$blue200',
+                        '& svg path': {
+                           fill: '$blue600',
+                        },
+                     }
+                     : { '&:hover': { bg: '$accents2' } }),
                }}
                align={'center'}
             >

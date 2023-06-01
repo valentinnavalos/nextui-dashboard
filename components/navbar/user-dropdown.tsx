@@ -1,6 +1,6 @@
-import {Avatar, Dropdown, Navbar, Text} from '@nextui-org/react';
+import { Avatar, Dropdown, Navbar, Text } from '@nextui-org/react';
 import React from 'react';
-import {DarkModeSwitch} from './darkmodeswitch';
+import { DarkModeSwitch } from './darkmodeswitch';
 
 export const UserDropdown = () => {
    return (
@@ -18,13 +18,13 @@ export const UserDropdown = () => {
          </Navbar.Item>
          <Dropdown.Menu
             aria-label="User menu actions"
-            onAction={(actionKey) => console.log({actionKey})}
+            onAction={(actionKey) => console.log({ actionKey })}
          >
-            <Dropdown.Item key="profile" css={{height: '$18'}}>
-               <Text b color="inherit" css={{d: 'flex'}}>
+            <Dropdown.Item key="profile" css={{ height: '$18' }}>
+               <Text b color="inherit" css={{ d: 'flex' }}>
                   Signed in as
                </Text>
-               <Text b color="inherit" css={{d: 'flex'}}>
+               <Text b color="inherit" css={{ d: 'flex' }}>
                   zoey@example.com
                </Text>
             </Dropdown.Item>

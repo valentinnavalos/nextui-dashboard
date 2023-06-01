@@ -5,7 +5,7 @@ interface Props {
    height?: number;
 }
 
-export const EyeIcon = ({fill, size, height, width, ...props}: Props) => {
+export const EyeIcon = ({ fill, size, height, width, ...props }: Props) => {
    return (
       <svg
          width={size || width || 24}

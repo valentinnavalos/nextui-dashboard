@@ -1,20 +1,20 @@
-import {Input, Link, Navbar, Text} from '@nextui-org/react';
+import { Input, Link, Navbar, Text } from '@nextui-org/react';
 import React from 'react';
-import {FeedbackIcon} from '../icons/navbar/feedback-icon';
-import {GithubIcon} from '../icons/navbar/github-icon';
-import {SupportIcon} from '../icons/navbar/support-icon';
-import {SearchIcon} from '../icons/searchicon';
-import {Box} from '../styles/box';
-import {Flex} from '../styles/flex';
-import {BurguerButton} from './burguer-button';
-import {NotificationsDropdown} from './notifications-dropdown';
-import {UserDropdown} from './user-dropdown';
+import { FeedbackIcon } from '../icons/navbar/feedback-icon';
+import { GithubIcon } from '../icons/navbar/github-icon';
+import { SupportIcon } from '../icons/navbar/support-icon';
+import { SearchIcon } from '../icons/searchicon';
+import { Box } from '../styles/box';
+import { Flex } from '../styles/flex';
+import { BurguerButton } from './burguer-button';
+import { NotificationsDropdown } from './notifications-dropdown';
+import { UserDropdown } from './user-dropdown';
 
 interface Props {
    children: React.ReactNode;
 }
 
-export const NavbarWrapper = ({children}: Props) => {
+export const NavbarWrapper = ({ children }: Props) => {
    const collapseItems = [
       'Profile',
       'Dashboard',
@@ -95,7 +95,7 @@ export const NavbarWrapper = ({children}: Props) => {
             </Navbar.Content>
             <Navbar.Content>
                <Navbar.Content hideIn={'md'}>
-                  <Flex align={'center'} css={{gap: '$4'}}>
+                  <Flex align={'center'} css={{ gap: '$4' }}>
                      <FeedbackIcon />
                      <Text span>Feedback?</Text>
                   </Flex>
