@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '../styles/box';
 import Chart, { Props } from 'react-apexcharts';
 
-const state: Props['series'] = [
+const defaultState: Props['series'] = [
    {
       name: 'Series1',
       data: [31, 40, 28, 51, 42, 109, 100],
@@ -13,7 +13,9 @@ const state: Props['series'] = [
    },
 ];
 
-const options: Props['options'] = {
+const defaultCategories = [1991, 1992, 1993, 1994, 1995, 1996, 1997];
+
+const getChartOptions = (userCategories: Props['xaxis']['categories']) => ({
    chart: {
       type: 'area',
       animations: {
@@ -36,7 +38,7 @@ const options: Props['options'] = {
    },
 
    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+      categories: userCategories || defaultCategories,
       labels: {
          // show: false,
          style: {
@@ -76,21 +78,23 @@ const options: Props['options'] = {
    },
    // @ts-ignore
    markers: false,
-};
+});
 
-export const Steam = () => {
+interface AreaProps {
+   series: Props['series'];
+   categories: Props['xaxis']['categories'];
+}
+
+export const Area = ({ series, categories }: AreaProps) => {
+   const options = getChartOptions(categories);
+
    return (
       <>
-         <Box
-            css={{
-               width: '100%',
-               zIndex: 5,
-            }}
-         >
+         <Box css={{ width: '100%', zIndex: 5 }}>
             <div id="chart">
                <Chart
                   options={options}
-                  series={state}
+                  series={series || defaultState}
                   type="area"
                   height={425}
                />

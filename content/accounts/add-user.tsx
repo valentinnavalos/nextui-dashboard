@@ -1,6 +1,6 @@
 import { Button, Divider, Input, Modal, Text } from '@nextui-org/react';
 import React from 'react';
-import { Flex } from '../styles/flex';
+import { Flex } from '../../components/styles/flex';
 
 export const AddUser = () => {
    const [visible, setVisible] = React.useState(false);

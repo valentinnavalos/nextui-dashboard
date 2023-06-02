@@ -11,8 +11,8 @@ import { CardBalance3 } from './card-balance3';
 import { CardAgents } from './card-agents';
 import { CardTransactions } from './card-transactions';
 
-const Chart = dynamic(
-   () => import('../charts/steam').then((mod) => mod.Steam),
+const AreaChart = dynamic(
+   () => import('../charts/area').then((mod) => mod.Area),
    {
       ssr: false,
    }
@@ -97,7 +97,7 @@ export const Content = () => (
                      py: '$10',
                   }}
                >
-                  <Chart />
+                  <AreaChart />
                </Box>
             </Box>
          </Flex>
